@@ -1,0 +1,9 @@
+appdirs==1.4.3
+bottle==0.12.13
+gevent==1.2.1
+greenlet==0.4.12
+packaging==16.8
+PyExecJS==1.4.0
+pyparsing==2.2.0
+PyReact==0.6.0
+six==1.10.0
