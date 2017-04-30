@@ -127,12 +127,9 @@ class SMParser(object):
             last_measure = measure
             last_bpm = bpm
 
-        # calculate the final BPM duration as the number of measures minus the
-        # sum of all existing measures, excluding the measure count for
-        # the final BPM if it exists already.
-        old_last_bpm = durations.pop(last_bpm, 0)
-        durations[last_bpm] = old_last_bpm + (
-            num_measures - sum(durations.values()))
+        # tack on the remaining measures in the song to the last reported
+        # bpm
+        durations[last_bpm] += (num_measures - sum(durations.values()))
 
         return num_measures, durations
 
