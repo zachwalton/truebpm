@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "rc-slider": "^7.0.2",
+    "rc-tooltip": "^3.4.3",
     "react": "15.5.4",
     "react-dom": "15.5.4",
-    "react-select": "1.0.0-rc.3",
-    "react-input-autosize": "1.1.0"
+    "react-input-autosize": "1.1.0",
+    "react-select": "1.0.0-rc.3"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

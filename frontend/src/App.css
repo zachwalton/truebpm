@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.Content {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 .App-songinfo {
   padding-top: 20px;
   padding-left: 20px;
