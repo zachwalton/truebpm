@@ -1,4 +1,5 @@
 {
+  "engines" : { "node" : ">=7.2.1" },
   "scripts": {
     "postinstall": "cd frontend && npm install --only=dev && npm install && npm run build"
   }
