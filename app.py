@@ -38,8 +38,9 @@ def static(filename):
 
 @app.get('/api/v1/simfiles')
 def api_v1_simfiles():
+    sims = sorted(os.listdir(SIMFILES_DIR), key=lambda s: s.lower())
     return json.dumps([{'value': sim, 'label': sim}
-                       for sim in os.listdir(SIMFILES_DIR)])
+                       for sim in sims])
 
 @app.get('/api/v1/simfiles/<name>', method='GET')
 def api_v1_simfiles_name(name):

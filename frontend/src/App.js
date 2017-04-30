@@ -18,6 +18,22 @@ const getSimfiles = (input) => {
 
 
 class SongInfo extends Component {
+  renderSpeedChanges() {
+    return this.props.songInfo.result.speed_changes.length ? (
+      <div className="App-speedwarning">
+        {
+          this.props.songInfo.result.speed_changes.map(function(message) {
+            return (
+              <div key={message}>
+                {message}
+                <br />
+              </div>
+            );
+          })
+        }
+      </div>
+    ) : null;
+  }
   render() {
     return this.props.songInfo ? (
       <div className="App-songinfo">
@@ -30,16 +46,7 @@ class SongInfo extends Component {
           })
         }
         <p className="App-speedsuggestion">{this.props.songInfo.result.suggestion}</p>
-        <div className="App-speedwarning">
-          {
-            this.props.songInfo.result.speed_changes.map(function(message) {
-              return <div key={message}>
-                {message}
-                <br />
-              </div>;
-            })
-          }
-        </div>
+        {this.renderSpeedChanges()}
       </div>
     ) : null;
   }

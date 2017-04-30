@@ -16,14 +16,14 @@
 .App-speedsuggestion {
   padding: 6px;
   margin-right: 6px;
-  background-color:  #8FBC8F;
+  background-color: rgb(0, 202, 219);
   border-radius: 15px;
 }
 
 .App-speedwarning {
   padding: 6px;
   margin-right: 6px;
-  background-color:  #F08080;
+  background-color: rgb(246, 80, 253);
   border-radius: 15px;
 }
 

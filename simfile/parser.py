@@ -68,6 +68,11 @@ class SMParser(object):
             line = _dos_to_unix(line.strip())
 
             if not parsing and not line.startswith(self.SECTION_HEADER):
+                if ':' in line and line.split(':')[0] in self.STYLES:
+                    # handle badly-behaved simfiles with no section headers
+                    parsing = True
+                    style = 'Double' if 'double' in line else 'Single'
+                    self.charts[style] = self.charts.setdefault(style, {})
                 continue
 
             elif line.startswith(self.SECTION_HEADER):
@@ -129,7 +134,8 @@ class SMParser(object):
 
         # tack on the remaining measures in the song to the last reported
         # bpm
-        durations[last_bpm] += (num_measures - sum(durations.values()))
+        durations[last_bpm] = durations.setdefault(last_bpm, 0) + (
+            num_measures - sum(durations.values()))
 
         return num_measures, durations
 
