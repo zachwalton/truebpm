@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Select from 'react-select';
 import Slider, {Handle} from 'rc-slider';
 import Tooltip from 'rc-tooltip';
+const queryString = require('query-string');
 
 import 'react-select/dist/react-select.css';
 import 'rc-slider/assets/index.css';
@@ -10,6 +11,12 @@ import 'rc-slider/assets/index.css';
 import './App.css';
 
 var isLoadingExternally = true;
+
+const updateHash = (param, value) => {
+  var hash = queryString.parse(location.hash);
+  hash[param] = value;
+  location.hash = "#" + queryString.stringify(hash);
+}
 
 const handle = (props) => {
   const { value, dragging, index, ...restProps } = props;
@@ -83,11 +90,17 @@ class SongInfo extends Component {
 class App extends Component {
   constructor() {
     super();
+    var hash = queryString.parse(location.hash);
     this.state = {
       selectedSong: null,
       songInfo: null,
-      preferredReadSpeed: 573,
+      preferredReadSpeed: (hash.readSpeed) ? hash.readSpeed : 573,
     };
+
+    if (hash.song) {
+      this.fetchSuggestions({'label': hash.song});
+    }
+
     this.fetchSuggestions = this.fetchSuggestions.bind(this);
     this.onSliderChange = this.onSliderChange.bind(this);
     this.onSliderSelect = this.onSliderSelect.bind(this);
@@ -105,6 +118,8 @@ class App extends Component {
 
   fetchSuggestions(song) {
     this.setState({'selectedSong': song});
+    updateHash('song', song.label);
+    updateHash('readSpeed', this.state.preferredReadSpeed);
     return fetch(`/api/v1/simfiles/` + song.label + `?style=Single&difficulty=Hard&preferred_rate=` + this.state.preferredReadSpeed + `&speed_change_threshold=4`)
       .then((response) => {
         return response.json();

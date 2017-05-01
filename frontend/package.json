@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "query-string": "^4.3.4",
     "rc-slider": "^7.0.2",
     "rc-tooltip": "^3.4.3",
     "react": "15.5.4",
