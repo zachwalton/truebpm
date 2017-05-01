@@ -183,7 +183,7 @@ class SMParser(object):
         if preferred_rate:
             mods = self.calculate_speed_mods(longest_bpm, int(preferred_rate))
 
-            analysis['suggestion'] = "Suggested rate mods: {lower_mod} = {lower_bpm}, {upper_mod} = {upper_bpm}".format(
+            analysis['suggestion'] = "Suggested speed mods: {lower_mod} = {lower_bpm}, {upper_mod} = {upper_bpm}".format(
                 lower_mod='x%s' % self._float_to_str(mods['lower']['mod']),
                 lower_bpm=int(mods['lower']['rate']),
                 upper_mod='x%s' % self._float_to_str(mods['upper']['mod']),
@@ -193,7 +193,7 @@ class SMParser(object):
             if other_long_durations:
                 for bpm, measures in reversed(sorted(other_long_durations.items(),
                                                      key=operator.itemgetter(1))):
-                    analysis['speed_changes'].append(("Suggested mods will result in read speed of "
+                    analysis['speed_changes'].append(("[BPM change] Suggested mods will result in read speed of "
                            "{lower_outlier_rate} @ {lower_mod} or "
                            "{upper_outlier_rate} @ {upper_mod} for "
                            "{pct:.2f}% of song").format(
