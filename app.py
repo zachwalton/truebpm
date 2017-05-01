@@ -10,7 +10,7 @@ from bottle import request, response, static_file
 from simfile import SMParser
 from urlparse import parse_qsl
 
-PROD = '--prod' in sys.argv
+PROD = True
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SIMFILES_DIR = PROJECT_ROOT + '/simfiles'
 
@@ -62,8 +62,10 @@ def run():
   bottle.run(
     app=app, 
     host='0.0.0.0',
-    port=os.environ['PORT'],
-    reloader=not PROD
+    port=os.environ.get('PORT', 8000),
+    reloader=not PROD,
+    server='gunicorn',
+    workers=8,
   )
 
 if __name__=='__main__':

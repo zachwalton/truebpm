@@ -1,1 +1,1 @@
-web: python app.py --prod start
+web: python app.py start
