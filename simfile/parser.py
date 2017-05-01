@@ -40,18 +40,35 @@ class SMParser(object):
         self._parse_sections()
 
     def _parse_header_tokens(self):
+        parsing_multiline_bpms = False
         for line in StringIO(self._simfile):
             try:
                 token, value = (line.strip()
                                 .replace(self.BOM_CHAR, '')
                                 .split(':')[:2])
             except ValueError:
-                continue
-            if token[1:] in self.TOKENS:
+                if not parsing_multiline_bpms:
+                    continue
+
+            if token[1:] in self.TOKENS and not token[1:] == 'BPMS':
                 setattr(self, token[1:], value.strip(';'))
+
+            if parsing_multiline_bpms:
+                # TODO: handle this generally vs. just for BPMs
+                if ';' in line:
+                    parsing_multiline_bpms = False
+                    continue
+
+                token, value = (line.strip().strip(',')
+                                .replace(self.BOM_CHAR, '')
+                                .split('=')[:2])
+                self.BPMS[token] = value
+
             if token[1:] == 'BPMS':
                 self.BPMS = OrderedDict([measure.split('=') for measure
-                                         in self.BPMS.split(',')])
+                                         in value.strip(';').split(',')])
+                if not ';' in value:
+                    parsing_multiline_bpms = True
             elif line.startswith(self.SECTION_HEADER):
                 break
 
