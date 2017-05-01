@@ -40,23 +40,22 @@ class SMParser(object):
         self._parse_sections()
 
     def _parse_header_tokens(self):
-        parsing_multiline_bpms = False
+        parsing_multiline_value = False
         for line in StringIO(self._simfile):
             try:
                 token, value = (line.strip()
                                 .replace(self.BOM_CHAR, '')
                                 .split(':')[:2])
             except ValueError:
-                if not parsing_multiline_bpms:
+                if not parsing_multiline_value:
                     continue
 
-            if token[1:] in self.TOKENS and not token[1:] == 'BPMS':
+            if token[1:] in self.TOKENS and not token[1:] in ('BPMS', 'STOPS'):
                 setattr(self, token[1:], value.strip(';'))
 
-            if parsing_multiline_bpms:
-                # TODO: handle this generally vs. just for BPMs
+            if parsing_multiline_value:
                 if ';' in line:
-                    parsing_multiline_bpms = False
+                    parsing_multiline_value = False
                     continue
 
                 token, value = (line.strip().strip(',')
@@ -64,11 +63,12 @@ class SMParser(object):
                                 .split('=')[:2])
                 self.BPMS[token] = value
 
-            if token[1:] == 'BPMS':
-                self.BPMS = OrderedDict([measure.split('=') for measure
-                                         in value.strip(';').split(',')])
+            if token[1:] in ('BPMS', 'STOPS'):
+                values = [measure.split('=') for measure in value.strip(';').split(',')]
+                values = OrderedDict(values) if len(values[0]) > 1 else OrderedDict()
+                setattr(self, token[1:], OrderedDict(values))
                 if not ';' in value:
-                    parsing_multiline_bpms = True
+                    parsing_multiline_value = True
             elif line.startswith(self.SECTION_HEADER):
                 break
 
@@ -163,6 +163,7 @@ class SMParser(object):
             'bpm_list': [],
             'suggestion': None,
             'speed_changes': [],
+            'stops': len(self.STOPS.keys()) if hasattr(self, 'STOPS') else 0,
         }
 
         for bpm, measures in reversed(sorted(durations.items(),

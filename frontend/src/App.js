@@ -37,6 +37,14 @@ const getSimfiles = (input) => {
 
 
 class SongInfo extends Component {
+  renderStops() {
+    return this.props.songInfo.result.stops ? (
+      <div>
+        <strong>Stops: {this.props.songInfo.result.stops}</strong>
+        <br /><br />
+      </div>
+    ) : null;
+  }
   renderSpeedChanges() {
     return this.props.songInfo.result.speed_changes.length ? (
       <div className="App-speedwarning">
@@ -56,6 +64,7 @@ class SongInfo extends Component {
   render() {
     return this.props.songInfo ? (
       <div className="App-songinfo">
+        {this.renderStops()}
         {
           this.props.songInfo.result.bpm_list.map(function(message) {
             return <div key={message}>
