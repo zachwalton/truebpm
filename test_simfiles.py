@@ -16,8 +16,11 @@ class SimfileTestCase(unittest.TestCase):
         logging.info('Processing {} simfiles...'.format(len(simfiles)))
         for sim in simfiles:
             try:
-                SMParser(open(simfiles_location + '/' + sim).read()).analyze(
-                    'Single', 'Hard', preferred_rate=570, speed_change_threshold=1)
+                parsed = SMParser(open(simfiles_location + '/' + sim).read())
+                parsed.analyze(
+                    'Single', parsed.charts['Single'].keys()[-1],
+                    preferred_rate=570,
+                    speed_change_threshold=1)
             except Exception as e:
                 errors.append("error in {}: {}: {}".format(sim, e.__class__.__name__, e.message))
                 logging.error(errors[-1])

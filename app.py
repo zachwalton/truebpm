@@ -51,8 +51,11 @@ def api_v1_simfiles_name(name):
      if not param in SMParser.analyze.func_code.co_varnames]
 
     try:
+        parsed = SMParser(open(SIMFILES_DIR + '/' + os.path.basename(name)).read())
+        # just override this for now, not all charts have a Hard/Expert chart
+        query_params['difficulty'] = parsed.charts['Single'].keys()[-1]
         return {
-            "result": SMParser(open(SIMFILES_DIR + '/' + os.path.basename(name)).read()).analyze(**query_params)
+            "result": parsed.analyze(**query_params)
         }
     except Exception as e:
         return { "errors": "Could not load simfile (bad param?): " + e.message }
