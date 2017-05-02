@@ -1,6 +1,6 @@
 # True BPM
 
-![](https://travis-ci.org/zachwalton/truebpm.svg?branch=master)
+[![](https://travis-ci.org/zachwalton/truebpm.svg?branch=master)](https://travis-ci.org/zachwalton/truebpm/builds)
 
 https://truebpm.dance
 
@@ -32,3 +32,5 @@ cd frontend/ && npm run start
 ## Adding Simfiles
 
 Simfiles live in the `simfiles/` directory, and the filenames are formatted as `<title> - <artist>`. To add a simfile, just run `./convert.py </path/to/simfile.sm>` and it will rename it for you. Drop it in the `simfiles/` directory and submit a PR.
+
+CI will test to make sure that the simfile is valid. If pull request verification fails, check the build logs.
