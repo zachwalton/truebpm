@@ -1,5 +1,7 @@
 # True BPM
 
+![](https://travis-ci.org/zachwalton/truebpm.svg?branch=master)
+
 https://truebpm.dance
 
 Pick a preferred read speed and select a song. You'll get a breakdown of BPM duration:
