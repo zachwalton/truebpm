@@ -19,7 +19,7 @@ def main():
     base = os.path.dirname(os.path.abspath(simfile))
 
     parsed = SMParser(open(simfile).read())
-    new_title = parsed.TITLE + " - " + parsed.ARTIST
+    new_title = (parsed.TITLE + " - " + parsed.ARTIST).replace('/', '')
     new_simfile = base + '/' + new_title
 
     print "moving %s to %s" % (simfile, new_simfile)
