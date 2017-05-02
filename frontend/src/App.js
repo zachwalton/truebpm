@@ -132,7 +132,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h3>true BPM</h3>
+          <h3><a href='/'>true BPM</a></h3>
         </div>
         <div className="Content">
           <p className="description">
@@ -161,7 +161,7 @@ class App extends Component {
         <SongInfo songInfo={this.state.songInfo} />
         <div className="github">
           <br />
-          <sub><small><a href='https://github.com/zachwalton/truebpm/issues/new<Paste>'>problem?</a></small></sub>
+          <sub><small><a href='https://github.com/zachwalton/truebpm/issues/new'>problem?</a></small></sub>
         </div>
       </div>
     );
