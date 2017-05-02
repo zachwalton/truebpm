@@ -42,3 +42,8 @@
 .description {
   font-size: large;
 }
+
+.github {
+  text-align: right;
+  margin-right: 10px;
+}

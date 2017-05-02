@@ -134,10 +134,10 @@ class App extends Component {
         <div className="App-header">
           <h3>true BPM</h3>
         </div>
-        <p className="description">
-          figure out the actual BPM of a chart on DDR A.
-        </p>
         <div className="Content">
+          <p className="description">
+            figure out the actual BPM of a chart on DDR.
+          </p>
           <small><i>preferred read speed:</i></small>
           <Slider
             min={50}
@@ -159,6 +159,10 @@ class App extends Component {
           />
         </div>
         <SongInfo songInfo={this.state.songInfo} />
+        <div className="github">
+          <br />
+          <sub><small><a href='https://github.com/zachwalton/truebpm/issues/new<Paste>'>problem?</a></small></sub>
+        </div>
       </div>
     );
   }
