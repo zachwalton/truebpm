@@ -41,6 +41,7 @@ class SMParser(object):
 
     def _parse_header_tokens(self):
         parsing_multiline_value = False
+
         for line in StringIO(self._simfile):
             try:
                 token, value = (line.strip()
@@ -58,15 +59,19 @@ class SMParser(object):
                     parsing_multiline_value = False
                     continue
 
-                token, value = (line.strip().strip(',')
-                                .replace(self.BOM_CHAR, '')
-                                .split('=')[:2])
-                self.BPMS[token] = value
+                measure, value = (line.strip().strip(',')
+                                  .replace(self.BOM_CHAR, '')
+                                  .split('=')[:2])
+                if token[1:] == 'BPMS':
+                    self.BPMS[measure] = value
+                else:
+                    self.STOPS[measure] = value
 
-            if token[1:] in ('BPMS', 'STOPS'):
+            elif token[1:] in ('BPMS', 'STOPS'):
                 values = [measure.split('=') for measure in value.strip(';').split(',')]
                 values = OrderedDict(values) if len(values[0]) > 1 else OrderedDict()
                 setattr(self, token[1:], OrderedDict(values))
+
                 if not ';' in value:
                     parsing_multiline_value = True
             elif line.startswith(self.SECTION_HEADER):
@@ -227,5 +232,8 @@ class SMParser(object):
             if rate >= preferred_rate:
                 mods['upper'] = {'rate': rate, 'mod': mod}
                 break
+
+        if mods['upper']['mod'] is None:
+            mods['upper'] = {'rate': rate, 'mod': mod}
 
         return mods
