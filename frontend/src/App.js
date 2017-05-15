@@ -120,7 +120,7 @@ class App extends Component {
     this.setState({'selectedSong': song});
     updateHash('song', song.label);
     updateHash('readSpeed', this.state.preferredReadSpeed);
-    return fetch(`/api/v1/simfiles/` + song.label + `?style=Single&difficulty=Hard&preferred_rate=` + this.state.preferredReadSpeed + `&speed_change_threshold=4`)
+    return fetch(`/api/v1/simfiles/` + encodeURIComponent(song.label) + `?style=Single&difficulty=Hard&preferred_rate=` + this.state.preferredReadSpeed + `&speed_change_threshold=4`)
       .then((response) => {
         return response.json();
       }).then(function(info) {
@@ -162,6 +162,7 @@ class App extends Component {
         <div className="github">
           <br />
           <sub><small><a href='https://github.com/zachwalton/truebpm/issues/new'>problem?</a></small></sub>
+          <br />
         </div>
       </div>
     );
