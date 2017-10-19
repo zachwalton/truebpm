@@ -28,11 +28,11 @@ def root():
     return static_file('index.html', root=BUILD_DIR)
 
 @app.get('/static/css/<filename>')
-def static(filename):
+def static_css(filename):
     return static_file(filename, root=STATIC_DIR + '/css')
 
 @app.get('/static/js/<filename>')
-def static(filename):
+def static_js(filename):
     return static_file(filename, root=STATIC_DIR + '/js')
 
 @app.get('/api/v1/simfiles')
