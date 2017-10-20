@@ -148,11 +148,12 @@ class SMParser(object):
         durations = {}
 
         for measure, bpm in self.BPMS.iteritems():
+            rounded_bpm = int(round(float(bpm)))
             if last_bpm is not None:
                 durations[last_bpm] = durations.setdefault(last_bpm, 0) + (
                     float(measure) - float(last_measure))
             last_measure = measure
-            last_bpm = bpm
+            last_bpm = rounded_bpm
 
         # tack on the remaining measures in the song to the last reported
         # bpm
