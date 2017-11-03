@@ -4,10 +4,12 @@
 # move <chart>.sm to "<title> - <artist>"
 
 import os
+import regex as re
 import sys
 
 from simfile import SMParser
 
+pattern = re.compile(r'([\p{IsHan}\p{IsBopo}\p{IsHira}\p{IsKatakana}]+)', re.UNICODE)
 
 def main():
     try:
@@ -17,9 +19,18 @@ def main():
         sys.exit(1)
 
     base = os.path.dirname(os.path.abspath(simfile))
-
     parsed = SMParser(open(simfile).read())
-    new_title = (parsed.TITLE + " - " + parsed.ARTIST).replace('/', '')
+    title = parsed.TITLE.decode('utf-8')
+
+    if pattern.match(title):
+        romanized_title = simfile[:-3]
+        new_title = (parsed.TITLE +
+                     " (" + romanized_title.strip('.') + ") " +
+                     " - " +
+                     parsed.ARTIST).replace('/', '')
+    else:
+        new_title = (parsed.TITLE + " - " + parsed.ARTIST).replace('/', '')
+
     new_simfile = base + '/' + new_title
 
     print "moving %s to %s" % (simfile, new_simfile)

@@ -1,15 +1,15 @@
 ﻿#TITLE:ZETA～素数の世界と超越者～;
 #SUBTITLE:;
 #ARTIST:Zektbach;
-#TITLETRANSLIT:ZETA ~sosuu no sekai to chouetsusha~;
+#TITLETRANSLIT:ZETA ~The World of Prime Numbers and the Transcendental Being~;
 #SUBTITLETRANSLIT:;
 #ARTISTTRANSLIT:;
 #CREDIT:;
-#BANNER:ZETA.png;
+#BANNER:ZETA ~The World of Prime Numbers and the Transcendental Being~.png;
 #BACKGROUND:;
 #LYRICSPATH:;
 #CDTITLE:./CDTITLES/beatmaniaIIDX.png;
-#MUSIC:ZETA.ogg;
+#MUSIC:ZETA ~The World of Prime Numbers and the Transcendental Being~.ogg;
 #OFFSET:0.000;
 #SAMPLESTART:92.340;
 #SAMPLELENGTH:15.000;
@@ -17,7 +17,7 @@
 #DISPLAYBPM:90.000:180.000;
 #BPMS:0=180,4=180,220=90,236=180;
 #STOPS:;
-#BGCHANGES:0.000=ZETA.avi=1.000=0=0=0;
+#BGCHANGES:;
 
 //---------------dance-single - ----------------
 #NOTES:
