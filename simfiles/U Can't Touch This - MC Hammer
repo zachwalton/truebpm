@@ -10,7 +10,7 @@
 #SAMPLELENGTH:15.000;
 #DisplayBPM:134;
 #BPMS:0=133.829,4=133.391,157=133.446;
-#Stops:157=1.353;
+#STOPS:157=1.353;
 #NOTES:
 dance-single:
 :

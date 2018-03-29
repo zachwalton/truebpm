@@ -16,7 +16,7 @@
 #SELECTABLE:YES;
 #DISPLAYBPM:160.000;
 #BPMS:0=160.714,4=160;
-#Stops:;
+#STOPS:;
 #NOTES:
 dance-single:
 :
