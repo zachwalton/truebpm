@@ -63,14 +63,17 @@ class SMParser(object):
                                   .replace(self.BOM_CHAR, '')
                                   .split('=')[:2])
                 if token[1:] == 'BPMS':
-                    self.BPMS[measure] = value
+                    self.BPMS[int(float(measure))] = value
                 else:
-                    self.STOPS[measure] = value
+                    self.STOPS[int(float(measure))] = value
 
             elif token[1:] in ('BPMS', 'STOPS'):
-                values = [measure.split('=') for measure in value.strip(';').split(',')]
-                values = OrderedDict(values) if len(values[0]) > 1 else OrderedDict()
-                setattr(self, token[1:], OrderedDict(values))
+                try:
+                    values = [[int(float(measure.split('=')[0])), measure.split('=')[1]] for measure in value.strip(';').split(',')]
+                    values = OrderedDict(values) if len(values[0]) > 1 else OrderedDict()
+                    setattr(self, token[1:], OrderedDict(values))
+                except ValueError:
+                    pass
 
                 if not ';' in value:
                     parsing_multiline_value = True
@@ -146,7 +149,6 @@ class SMParser(object):
         num_measures = len(self.charts[style][difficulty]['chart']) * 4
         last_bpm, last_measure = None, None
         durations = {}
-
         for measure, bpm in self.BPMS.iteritems():
             rounded_bpm = int(round(float(bpm)))
             if last_bpm is not None:
@@ -162,6 +164,30 @@ class SMParser(object):
 
         return num_measures, durations
 
+    def line_chart_data(self, num_measures):
+        bpm_data_points = []
+        stop_data_points = []
+        current_bpm = 0
+
+        for i in xrange(0, num_measures):
+            bpm = self.BPMS.get(i)
+            if bpm is not None:
+                current_bpm = bpm
+            bpm_data_points.append(int(float(current_bpm)))
+
+        if hasattr(self, 'STOPS') and len(self.STOPS) > 0:
+            for i in xrange(0, num_measures):
+                stop = self.STOPS.get(i)
+                if stop is not None:
+                    stop_data_points.append(bpm_data_points[i])
+                else:
+                    stop_data_points.append(None)
+
+        return {
+          'bpm': bpm_data_points,
+          'stop': stop_data_points,
+        }
+
     def analyze(self, style, difficulty, preferred_rate=None, speed_change_threshold=5):
         num_measures, durations = self.bpm_durations(style, difficulty)
         longest_bpm, longest_duration, other_long_durations = None, 0, {}
@@ -171,7 +197,6 @@ class SMParser(object):
             'speed_changes': [],
             'stops': len(self.STOPS.keys()) if hasattr(self, 'STOPS') else 0,
         }
-
         for bpm, measures in reversed(sorted(durations.items(),
                                              key=operator.itemgetter(1))):
             longest_duration = measures if measures > longest_duration else longest_duration
@@ -211,6 +236,8 @@ class SMParser(object):
                         pct=measures / num_measures * 100,
                     ))
 
+        analysis['line_chart_data'] = self.line_chart_data(num_measures)
+        analysis['number_of_measures'] = num_measures
         return analysis
 
     def calculate_speed_mods(self, bpm, preferred_rate):

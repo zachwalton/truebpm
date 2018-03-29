@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import Suggest from './Suggest.js';
+import {Line} from 'react-chartjs-2';
 import Select from 'react-select';
 import Slider, {Handle} from 'rc-slider';
 import Tooltip from 'rc-tooltip';
@@ -40,6 +40,27 @@ const getSimfiles = (input) => {
     }).then((json) => {
       return { options: json };
     });
+}
+
+const range = (upper) => {
+  return Array.apply(null, Array(upper)).map(function (_, i) {return i;});
+}
+
+const chartOptions = {
+  scales: {
+    yAxes: [{
+      scaleLabel: {
+        display: true,
+        labelString: 'BPM'
+      }
+    }],
+    xAxes: [{
+      scaleLabel: {
+        display: true,
+        labelString: 'Measure'
+      }
+    }]
+  }     
 }
 
 
@@ -95,6 +116,55 @@ class App extends Component {
       selectedSong: null,
       songInfo: null,
       preferredReadSpeed: (hash.readSpeed) ? hash.readSpeed : 573,
+      chartData: {
+        labels: [],
+        datasets: [
+          {
+            label: 'Stops',
+            fill: false,
+            showLine: false,
+            lineTension: 0.1,
+            backgroundColor: 'rgba(202,58,221,0.4)',
+            borderColor: 'rgba(180,47,196,1)',
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: 'rgba(202,58,221,0.4)',
+            pointBackgroundColor: 'rgba(202,58,221,0.4)',
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: 'rgba(202,58,221,1)',
+            pointHoverBorderColor: 'rgba(202,58,221,1)',
+            pointHoverBorderWidth: 2,
+            pointRadius: 5,
+            pointHitRadius: 10,
+            data: []
+          },
+          {
+            label: 'BPM',
+            fill: false,
+            steppedLine: true,
+            lineTension: 0.1,
+            backgroundColor: 'rgba(95,212,230,0.4)',
+            borderColor: 'rgba(79,178,195,1)',
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: 'rgba(95,212,230,0.4)',
+            pointBackgroundColor: 'rgba(95,212,230,0.4)',
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: 'rgba(90,201,18,1)',
+            pointHoverBorderColor: 'rgba(220,220,220,1)',
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data: [],
+          },
+        ]
+      },
     };
 
     if (hash.song) {
@@ -125,6 +195,12 @@ class App extends Component {
         return response.json();
       }).then(function(info) {
         this.setState({'songInfo': info});
+
+        var chartData = this.state.chartData;
+        chartData.datasets[0].data = info.result.line_chart_data.stop;
+        chartData.datasets[1].data = info.result.line_chart_data.bpm;
+        chartData.labels = range(info.result.number_of_measures)
+        this.setState({'chartData': chartData});
       }.bind(this));
   }
 
@@ -159,6 +235,7 @@ class App extends Component {
           />
         </div>
         <SongInfo songInfo={this.state.songInfo} />
+        <Line data={this.state.chartData} options={chartOptions} />
         <div className="github">
           <br />
           <sub><small><a href='https://github.com/zachwalton/truebpm/issues/new'>problem?</a></small></sub>

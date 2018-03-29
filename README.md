@@ -19,7 +19,7 @@ To serve the API + frontend, run:
 ```
 virtualenv venv && source venv/bin/activate
 pip install -r requirements.txt -r dev_requirements.txt
-cd frontend/ && npm run build && cd -
+cd frontend/ && npm install && npm run build && cd -
 honcho start
 ```
 
