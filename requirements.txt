@@ -7,4 +7,5 @@ packaging==16.8
 PyExecJS==1.4.0
 pyparsing==2.2.0
 PyReact==0.6.0
+regex==2018.2.21
 six==1.10.0
