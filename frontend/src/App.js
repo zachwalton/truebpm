@@ -10,8 +10,6 @@ import 'rc-slider/assets/index.css';
 
 import './App.css';
 
-var isLoadingExternally = true;
-
 const updateHash = (param, value) => {
   var hash = queryString.parse(location.hash);
   hash[param] = value;
@@ -33,12 +31,10 @@ const handle = (props) => {
   );
 };
 
-const getSimfiles = (input) => {
+const getSimfiles = () => {
   return fetch(`/api/v1/simfiles`)
     .then((response) => {
       return response.json();
-    }).then((json) => {
-      return { options: json };
     });
 }
 
@@ -113,6 +109,7 @@ class App extends Component {
     super();
     var hash = queryString.parse(location.hash);
     this.state = {
+      songList: null,
       selectedSong: null,
       songInfo: null,
       preferredReadSpeed: (hash.readSpeed) ? hash.readSpeed : 573,
@@ -176,6 +173,12 @@ class App extends Component {
     this.onSliderSelect = this.onSliderSelect.bind(this);
   }
 
+  componentDidMount() {
+    getSimfiles().then(songList => {
+      this.setState({ songList });
+    });
+  }
+
   onSliderChange(value) {
     this.setState({'preferredReadSpeed': value});
   }
@@ -220,17 +223,17 @@ class App extends Component {
             max={800}
             defaultValue={573}
             value={this.state.preferredReadSpeed}
-		    handle={handle}
+            handle={handle}
             step={5}
             onChange={this.onSliderChange}
             onAfterChange={this.onSliderSelect}
           />
           <br />
-          <Select.Async
+          <Select
             name="form-field-name"
             value="one"
-            loadOptions={getSimfiles}
-            isLoading={isLoadingExternally}
+            options={this.state.songList}
+            isLoading={!this.state.songList}
             onChange={this.fetchSuggestions}
           />
         </div>
