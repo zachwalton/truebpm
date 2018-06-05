@@ -108,14 +108,20 @@ class App extends Component {
   constructor() {
     super();
     var hash = queryString.parse(location.hash);
-    const storedReadSpeed = localStorage.getItem('preferredReadSpeed');
-    const defaultReadSpeed = storedReadSpeed ? storedReadSpeed : 573;
+    var readSpeed = hash.readSpeed;
+
+    if (readSpeed) {
+      // Override local storage if read speed is provided in the hash
+      localStorage.setItem('preferredReadSpeed', readSpeed);
+    } else {
+      readSpeed = localStorage.getItem('preferredReadSpeed');
+    }
 
     this.state = {
       songList: null,
       selectedSong: null,
       songInfo: null,
-      preferredReadSpeed: (hash.readSpeed) ? hash.readSpeed : defaultReadSpeed,
+      preferredReadSpeed: readSpeed ? readSpeed : 573,
       chartData: {
         labels: [],
         datasets: [
