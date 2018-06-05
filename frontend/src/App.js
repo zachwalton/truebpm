@@ -239,9 +239,11 @@ class App extends Component {
         </div>
         <SongInfo songInfo={this.state.songInfo} />
         <Line data={this.state.chartData} options={chartOptions} />
-        <div className="github">
+        <div className="footer">
           <br />
-          <sub><small><a href='https://github.com/zachwalton/truebpm/issues/new'>problem?</a></small></sub>
+          <a href='https://github.com/zachwalton/truebpm'><img alt="github" height="24" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" /></a>
+          &nbsp;
+          <a href='https://twitter.com/hoofed_locust'><img alt="twitter" height="24" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitter.svg" /></a>
           <br />
         </div>
       </div>
