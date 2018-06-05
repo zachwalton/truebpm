@@ -108,11 +108,14 @@ class App extends Component {
   constructor() {
     super();
     var hash = queryString.parse(location.hash);
+    const storedReadSpeed = localStorage.getItem('preferredReadSpeed');
+    const defaultReadSpeed = storedReadSpeed ? storedReadSpeed : 573;
+
     this.state = {
       songList: null,
       selectedSong: null,
       songInfo: null,
-      preferredReadSpeed: (hash.readSpeed) ? hash.readSpeed : 573,
+      preferredReadSpeed: (hash.readSpeed) ? hash.readSpeed : defaultReadSpeed,
       chartData: {
         labels: [],
         datasets: [
@@ -181,6 +184,7 @@ class App extends Component {
 
   onSliderChange(value) {
     this.setState({'preferredReadSpeed': value});
+    localStorage.setItem('preferredReadSpeed', value);
   }
 
   onSliderSelect(value) {
