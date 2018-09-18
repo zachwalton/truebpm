@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "chart.js": "^2.7.2",
+    "cryptiles": "^4.1.2",
+    "macaddress": "^0.2.9",
     "query-string": "4.3.4",
     "rc-slider": "7.0.2",
     "rc-tooltip": "3.4.3",
@@ -11,7 +13,8 @@
     "react-chartjs-2": "^2.7.0",
     "react-dom": "15.5.4",
     "react-input-autosize": "1.1.0",
-    "react-select": "1.0.0-rc.3"
+    "react-select": "1.0.0-rc.3",
+    "url-parse": "^1.4.3"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"
