@@ -23,7 +23,15 @@ def main():
     title = parsed.TITLE.decode('utf-8')
 
     if pattern.match(title):
-        romanized_title = simfile[:-3]
+        try:
+            romanized_title = parsed.TITLETRANSLIT
+        except:
+            romanized_title = ""
+
+        # Fall back to the file name if TITLETRANSLIT is empty
+        if romanized_title == "":
+            romanized_title = os.path.basename(simfile)[:-3]
+
         new_title = (parsed.TITLE +
                      " (" + romanized_title.strip('.') + ") " +
                      " - " +
