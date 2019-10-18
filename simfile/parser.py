@@ -77,7 +77,7 @@ class SMParser(object):
 
                 if not ';' in value:
                     parsing_multiline_value = True
-            elif line.startswith(self.SECTION_HEADER):
+            elif line.startswith(self.SECTION_HEADER) and 'song ID:' not in line:
                 break
 
     def _parse_sections(self):
@@ -101,6 +101,10 @@ class SMParser(object):
                 continue
 
             elif line.startswith(self.SECTION_HEADER):
+                # ignore song ID comments
+                if 'song ID:' in line:
+                    continue
+
                 # parse section header
                 parsing = True
                 style = 'Double' if 'double' in line else 'Single'
