@@ -7,7 +7,7 @@ import os
 
 from bottle import request, response, static_file
 from simfile import SMParser
-from urlparse import parse_qsl
+from urllib.parse import parse_qsl
 
 PROD = True
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -63,7 +63,7 @@ def api_v1_simfiles_name(name):
 def run():
   bottle.debug(not PROD)
   bottle.run(
-    app=app, 
+    app=app,
     host='0.0.0.0',
     port=os.environ.get('PORT', 8000),
     reloader=not PROD,

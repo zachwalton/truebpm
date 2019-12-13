@@ -1,6 +1,6 @@
 from collections import OrderedDict
 import operator
-from StringIO import StringIO
+from io import StringIO
 
 class SMParser(object):
 

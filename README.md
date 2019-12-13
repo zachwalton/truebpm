@@ -19,14 +19,14 @@ To serve the API + frontend, run:
 ```
 virtualenv venv && source venv/bin/activate
 pip install -r requirements.txt -r dev_requirements.txt
-cd frontend/ && npm install && npm run build && cd -
+cd frontend/ && yarn && yarn run build && cd -
 honcho start
 ```
 
 This will serve the API + frontend on `http://127.0.0.1:5000`. If you just want to work on the frontend, you may want to use npm to get the benefits of live reloading:
 
 ```
-cd frontend/ && npm run start
+cd frontend/ && yarn run start
 ```
 
 ## Adding Simfiles
