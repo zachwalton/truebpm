@@ -46,14 +46,15 @@ def api_v1_simfiles_name(name):
     query_params = dict(parse_qsl(request.query_string))
 
     # strip invalid params
-    [query_params.pop(param) for param in query_params.keys()
-     if not param in SMParser.analyze.func_code.co_varnames]
+    [query_params.pop(param) for param in list(query_params.keys())
+     if not param in SMParser.analyze.__code__.co_varnames]
 
     try:
         with open(SIMFILES_DIR + '/' + os.path.basename(name)) as fh:
             parsed = SMParser(fh.read())
             # just override this for now, not all charts have a Hard/Expert chart
-            query_params['difficulty'] = parsed.charts['Single'].keys()[-1]
+
+            query_params['difficulty'] = list(parsed.charts['Single'].keys())[-1]
             return {
                 "result": parsed.analyze(**query_params)
             }

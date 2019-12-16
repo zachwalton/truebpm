@@ -15,7 +15,7 @@ def main():
     try:
         simfile = sys.argv[1]
     except IndexError:
-        print "usage: %s /path/to/simfile.sm" % sys.argv[0]
+        print("usage: %s /path/to/simfile.sm" % sys.argv[0])
         sys.exit(1)
 
     base = os.path.dirname(os.path.abspath(simfile))
@@ -41,7 +41,7 @@ def main():
 
     new_simfile = base + '/' + new_title
 
-    print "moving %s to %s" % (simfile, new_simfile)
+    print("moving %s to %s" % (simfile, new_simfile))
     os.rename(simfile, new_simfile)
 
 if __name__ == "__main__":
