@@ -50,7 +50,7 @@ def api_v1_simfiles_name(name):
      if not param in SMParser.analyze.__code__.co_varnames]
 
     try:
-        with open(SIMFILES_DIR + '/' + os.path.basename(name)) as fh:
+        with open(SIMFILES_DIR + '/' + os.path.basename(name), encoding='utf_8_sig') as fh:
             parsed = SMParser(fh.read())
             # just override this for now, not all charts have a Hard/Expert chart
 
