@@ -43,6 +43,9 @@ class SMParser(object):
         parsing_multiline_value = False
 
         for line in StringIO(self._simfile):
+            if line.startswith('#NOTES'):
+                break
+
             try:
                 token, value = (line.strip()
                                 .replace(self.BOM_CHAR, '')
@@ -77,8 +80,6 @@ class SMParser(object):
 
                 if not ';' in value:
                     parsing_multiline_value = True
-            elif line.startswith(self.SECTION_HEADER) and 'song ID:' not in line:
-                break
 
     def _parse_sections(self):
 
