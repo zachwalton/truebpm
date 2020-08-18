@@ -1,6 +1,6 @@
 from collections import OrderedDict
 import operator
-from StringIO import StringIO
+from io import StringIO
 
 class SMParser(object):
 
@@ -30,7 +30,7 @@ class SMParser(object):
 
     STYLES = ('dance-single', 'dance-double')
     DIFFICULTIES = ('Beginner', 'Easy', 'Medium', 'Hard', 'Challenge')
-    FOOT_RATINGS = range(1, 11)
+    FOOT_RATINGS = list(range(1, 11))
     STEP_TYPES = '0123'
 
     def __init__(self, simfile):
@@ -43,6 +43,9 @@ class SMParser(object):
         parsing_multiline_value = False
 
         for line in StringIO(self._simfile):
+            if line.startswith('#NOTES'):
+                break
+
             try:
                 token, value = (line.strip()
                                 .replace(self.BOM_CHAR, '')
@@ -77,8 +80,6 @@ class SMParser(object):
 
                 if not ';' in value:
                     parsing_multiline_value = True
-            elif line.startswith(self.SECTION_HEADER) and 'song ID:' not in line:
-                break
 
     def _parse_sections(self):
 
@@ -153,7 +154,7 @@ class SMParser(object):
         num_measures = len(self.charts[style][difficulty]['chart']) * 4
         last_bpm, last_measure = None, None
         durations = {}
-        for measure, bpm in self.BPMS.iteritems():
+        for measure, bpm in self.BPMS.items():
             rounded_bpm = int(round(float(bpm)))
             if last_bpm is not None:
                 durations[last_bpm] = durations.setdefault(last_bpm, 0) + (
@@ -173,14 +174,14 @@ class SMParser(object):
         stop_data_points = []
         current_bpm = 0
 
-        for i in xrange(0, num_measures):
+        for i in range(0, num_measures):
             bpm = self.BPMS.get(i)
             if bpm is not None:
                 current_bpm = bpm
             bpm_data_points.append(int(float(current_bpm)))
 
         if hasattr(self, 'STOPS') and len(self.STOPS) > 0:
-            for i in xrange(0, num_measures):
+            for i in range(0, num_measures):
                 stop = self.STOPS.get(i)
                 if stop is not None:
                     stop_data_points.append(bpm_data_points[i])
@@ -199,9 +200,9 @@ class SMParser(object):
             'bpm_list': [],
             'suggestion': None,
             'speed_changes': [],
-            'stops': len(self.STOPS.keys()) if hasattr(self, 'STOPS') else 0,
+            'stops': len(list(self.STOPS.keys())) if hasattr(self, 'STOPS') else 0,
         }
-        for bpm, measures in reversed(sorted(durations.items(),
+        for bpm, measures in reversed(sorted(list(durations.items()),
                                              key=operator.itemgetter(1))):
             longest_duration = measures if measures > longest_duration else longest_duration
             longest_bpm = float(bpm) if longest_bpm is None else longest_bpm
@@ -227,7 +228,7 @@ class SMParser(object):
             )
 
             if other_long_durations:
-                for bpm, measures in reversed(sorted(other_long_durations.items(),
+                for bpm, measures in reversed(sorted(list(other_long_durations.items()),
                                                      key=operator.itemgetter(1))):
                     analysis['speed_changes'].append(("[BPM change] Suggested mods will result in read speed of "
                            "{lower_outlier_rate} @ {lower_mod} or "

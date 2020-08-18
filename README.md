@@ -12,21 +12,27 @@ Pick a preferred read speed and select a song. You'll get a breakdown of BPM dur
 
 ## Setup
 
-You'll need a working node + NPM installation to build the frontend and a working Python + virtualenv installation to work with the API server / simfile parser.
+### Requirements
 
-To serve the API + frontend, run:
+- NodeJS 8+
+- Yarn 1.22.4
+- Python 3.6.11
+  - Using [pyenv](https://github.com/pyenv/pyenv) is probably the easiest way to do this.
 
-```
-virtualenv venv && source venv/bin/activate
-pip install -r requirements.txt -r dev_requirements.txt
-cd frontend/ && npm install && npm run build && cd -
-honcho start
-```
-
-This will serve the API + frontend on `http://127.0.0.1:5000`. If you just want to work on the frontend, you may want to use npm to get the benefits of live reloading:
+Set up a virtual env and install dependencies:
 
 ```
-cd frontend/ && npm run start
+pyenv install (This'll install 3.6.11 if you don't have it already)
+pyenv virtualenv truebpm
+pyenv activate truebpm
+```
+
+To serve the API + frontend, `./serve.sh`
+
+This will serve the API + frontend on `http://127.0.0.1:5000`. If you just want to work on the frontend, you may want to use yarn to get the benefits of live reloading:
+
+```
+cd frontend/ && yarn run start
 ```
 
 ## Adding Simfiles

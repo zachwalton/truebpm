@@ -1,6 +1,8 @@
 {
-  "engines" : { "node" : "7.10.1" },
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "scripts": {
-    "postinstall": "cd frontend && npm install --only=dev && npm install && npm run build"
+    "postinstall": "cd frontend && yarn install --only=dev && yarn install && yarn build"
   }
 }

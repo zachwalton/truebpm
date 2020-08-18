@@ -18,7 +18,7 @@ class SimfileTestCase(unittest.TestCase):
             try:
                 parsed = SMParser(open(simfiles_location + '/' + sim).read())
                 parsed.analyze(
-                    'Single', parsed.charts['Single'].keys()[-1],
+                    'Single', list(parsed.charts['Single'].keys())[-1],
                     preferred_rate=570,
                     speed_change_threshold=1)
             except Exception as e:
