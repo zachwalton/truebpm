@@ -3,17 +3,16 @@ import {Line} from 'react-chartjs-2';
 import Select from 'react-select';
 import Slider, {Handle} from 'rc-slider';
 import Tooltip from 'rc-tooltip';
-const queryString = require('query-string');
-
+import SongInfo from "./SongInfo";
+import queryString from 'query-string';
 import 'react-select/dist/react-select.css';
 import 'rc-slider/assets/index.css';
-
 import './App.css';
 
 const updateHash = (param, value) => {
-  var hash = queryString.parse(location.hash);
+  var hash = queryString.parse(Window.location.hash);
   hash[param] = value;
-  location.hash = "#" + queryString.stringify(hash);
+  Window.location.hash = "#" + queryString.stringify(hash);
 }
 
 const handle = (props) => {
@@ -58,56 +57,10 @@ const chartOptions = {
     }]
   }     
 }
-
-
-class SongInfo extends Component {
-  renderStops() {
-    return this.props.songInfo.result.stops ? (
-      <div>
-        <strong>Stops: {this.props.songInfo.result.stops}</strong>
-        <br /><br />
-      </div>
-    ) : null;
-  }
-  renderSpeedChanges() {
-    return this.props.songInfo.result.speed_changes.length ? (
-      <div className="App-speedwarning">
-        {
-          this.props.songInfo.result.speed_changes.map(function(message) {
-            return (
-              <div key={message}>
-                {message}
-                <br />
-              </div>
-            );
-          })
-        }
-      </div>
-    ) : null;
-  }
-  render() {
-    return this.props.songInfo ? (
-      <div className="App-songinfo">
-        {this.renderStops()}
-        {
-          this.props.songInfo.result.bpm_list.map(function(message) {
-            return <div key={message}>
-              {message}
-              <br />
-            </div>;
-          })
-        }
-        <p className="App-speedsuggestion">{this.props.songInfo.result.suggestion}</p>
-        {this.renderSpeedChanges()}
-      </div>
-    ) : null;
-  }
-}
-
 class App extends Component {
   constructor() {
     super();
-    var hash = queryString.parse(location.hash);
+    var hash = queryString.parse(Window.location.hash);
     var readSpeed = hash.readSpeed;
 
     if (readSpeed) {
