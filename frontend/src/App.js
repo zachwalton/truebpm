@@ -5,7 +5,6 @@ import Slider, {Handle} from 'rc-slider';
 import Tooltip from 'rc-tooltip';
 import SongInfo from "./SongInfo";
 import queryString from 'query-string';
-import 'react-select/dist/react-select.css';
 import 'rc-slider/assets/index.css';
 import './App.css';
 
