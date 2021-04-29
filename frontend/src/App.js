@@ -1,33 +1,19 @@
 import React, { Component } from 'react';
 import {Line} from 'react-chartjs-2';
 import Select from 'react-select';
-import Slider, {Handle} from 'rc-slider';
-import Tooltip from 'rc-tooltip';
+import Slider from 'rc-slider';
 import SongInfo from "./SongInfo";
 import queryString from 'query-string';
 import 'rc-slider/assets/index.css';
 import './App.css';
+
+const SliderWithTooltip = Slider.createSliderWithTooltip(Slider);
 
 const updateHash = (param, value) => {
   var hash = queryString.parse(Window.location.hash);
   hash[param] = value;
   Window.location.hash = "#" + queryString.stringify(hash);
 }
-
-const handle = (props) => {
-  const { value, dragging, index, ...restProps } = props;
-  return (
-    <Tooltip
-      prefixCls="rc-slider-tooltip"
-      overlay={value}
-      visible={dragging}
-      placement="top"
-      key={index}
-    >
-      <Handle {...restProps} />
-    </Tooltip>
-  );
-};
 
 const getSimfiles = () => {
   return fetch(`/api/v1/simfiles`)
@@ -180,12 +166,11 @@ class App extends Component {
             figure out the actual BPM of a chart on DDR.
           </p>
           <small><i>preferred read speed:</i></small>
-          <Slider
+          <SliderWithTooltip
             min={50}
             max={800}
             defaultValue={573}
             value={this.state.preferredReadSpeed}
-            handle={handle}
             step={5}
             onChange={this.onSliderChange}
             onAfterChange={this.onSliderSelect}
