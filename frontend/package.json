@@ -3,25 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "chart.js": "^2.7.2",
-    "cryptiles": "^4.1.2",
-    "macaddress": "^0.2.9",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "chart.js": "2.7",
     "query-string": "4.3.4",
     "rc-slider": "7.0.2",
     "rc-tooltip": "3.4.3",
-    "react": "15.5.4",
-    "react-chartjs-2": "^2.7.0",
-    "react-dom": "15.5.4",
-    "react-input-autosize": "1.1.0",
+    "react": "^17.0.2",
+    "react-chartjs-2": "2.7",
+    "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "react-select": "1.0.0-rc.3",
-    "url-parse": "^1.4.3"
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
