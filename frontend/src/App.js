@@ -10,9 +10,9 @@ import './App.css';
 const SliderWithTooltip = Slider.createSliderWithTooltip(Slider);
 
 const updateHash = (param, value) => {
-  var hash = queryString.parse(Window.location.hash);
+  var hash = queryString.parse(window.location.hash);
   hash[param] = value;
-  Window.location.hash = "#" + queryString.stringify(hash);
+  window.location.hash = "#" + queryString.stringify(hash);
 }
 
 const getSimfiles = () => {
@@ -45,7 +45,8 @@ const chartOptions = {
 class App extends Component {
   constructor() {
     super();
-    var hash = queryString.parse(Window.location.hash);
+
+    var hash = queryString.parse(window.location.hash);
     var readSpeed = hash.readSpeed;
 
     if (readSpeed) {
