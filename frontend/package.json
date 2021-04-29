@@ -13,9 +13,9 @@
     "react-chartjs-2": "^2.7.0",
     "react-dom": "15.5.4",
     "react-input-autosize": "1.1.0",
+    "react-scripts": "0.9.5",
     "react-select": "1.0.0-rc.3",
-    "url-parse": "^1.4.3",
-    "react-scripts": "0.9.5"
+    "url-parse": "^1.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
