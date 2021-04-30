@@ -22,10 +22,6 @@ const getSimfiles = () => {
     });
 }
 
-const range = (upper) => {
-  return Array.apply(null, Array(upper)).map(function (_, i) {return i;});
-}
-
 const chartOptions = {
   scales: {
     yAxes: [{
@@ -151,7 +147,7 @@ class App extends Component {
         var chartData = this.state.chartData;
         chartData.datasets[0].data = info.result.line_chart_data.stop;
         chartData.datasets[1].data = info.result.line_chart_data.bpm;
-        chartData.labels = range(info.result.number_of_measures)
+        chartData.labels = [...Array(info.result.number_of_measures).keys()]
         this.setState({'chartData': chartData});
       }.bind(this));
   }
