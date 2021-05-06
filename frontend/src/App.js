@@ -1,45 +1,25 @@
 import React, { Component } from 'react';
 import {Line} from 'react-chartjs-2';
 import Select from 'react-select';
-import Slider, {Handle} from 'rc-slider';
-import Tooltip from 'rc-tooltip';
-const queryString = require('query-string');
-
-import 'react-select/dist/react-select.css';
+import Slider from 'rc-slider';
+import SongInfo from "./SongInfo";
+import queryString from 'query-string';
 import 'rc-slider/assets/index.css';
-
 import './App.css';
 
-const updateHash = (param, value) => {
-  var hash = queryString.parse(location.hash);
-  hash[param] = value;
-  location.hash = "#" + queryString.stringify(hash);
-}
+const SliderWithTooltip = Slider.createSliderWithTooltip(Slider);
 
-const handle = (props) => {
-  const { value, dragging, index, ...restProps } = props;
-  return (
-    <Tooltip
-      prefixCls="rc-slider-tooltip"
-      overlay={value}
-      visible={dragging}
-      placement="top"
-      key={index}
-    >
-      <Handle {...restProps} />
-    </Tooltip>
-  );
-};
+const updateHash = (param, value) => {
+  var hash = queryString.parse(window.location.hash);
+  hash[param] = value;
+  window.location.hash = "#" + queryString.stringify(hash);
+}
 
 const getSimfiles = () => {
   return fetch(`/api/v1/simfiles`)
     .then((response) => {
       return response.json();
     });
-}
-
-const range = (upper) => {
-  return Array.apply(null, Array(upper)).map(function (_, i) {return i;});
 }
 
 const chartOptions = {
@@ -58,56 +38,11 @@ const chartOptions = {
     }]
   }     
 }
-
-
-class SongInfo extends Component {
-  renderStops() {
-    return this.props.songInfo.result.stops ? (
-      <div>
-        <strong>Stops: {this.props.songInfo.result.stops}</strong>
-        <br /><br />
-      </div>
-    ) : null;
-  }
-  renderSpeedChanges() {
-    return this.props.songInfo.result.speed_changes.length ? (
-      <div className="App-speedwarning">
-        {
-          this.props.songInfo.result.speed_changes.map(function(message) {
-            return (
-              <div key={message}>
-                {message}
-                <br />
-              </div>
-            );
-          })
-        }
-      </div>
-    ) : null;
-  }
-  render() {
-    return this.props.songInfo ? (
-      <div className="App-songinfo">
-        {this.renderStops()}
-        {
-          this.props.songInfo.result.bpm_list.map(function(message) {
-            return <div key={message}>
-              {message}
-              <br />
-            </div>;
-          })
-        }
-        <p className="App-speedsuggestion">{this.props.songInfo.result.suggestion}</p>
-        {this.renderSpeedChanges()}
-      </div>
-    ) : null;
-  }
-}
-
 class App extends Component {
   constructor() {
     super();
-    var hash = queryString.parse(location.hash);
+
+    var hash = queryString.parse(window.location.hash);
     var readSpeed = hash.readSpeed;
 
     if (readSpeed) {
@@ -212,7 +147,7 @@ class App extends Component {
         var chartData = this.state.chartData;
         chartData.datasets[0].data = info.result.line_chart_data.stop;
         chartData.datasets[1].data = info.result.line_chart_data.bpm;
-        chartData.labels = range(info.result.number_of_measures)
+        chartData.labels = [...Array(info.result.number_of_measures).keys()]
         this.setState({'chartData': chartData});
       }.bind(this));
   }
@@ -228,12 +163,11 @@ class App extends Component {
             figure out the actual BPM of a chart on DDR.
           </p>
           <small><i>preferred read speed:</i></small>
-          <Slider
+          <SliderWithTooltip
             min={50}
             max={800}
             defaultValue={573}
             value={this.state.preferredReadSpeed}
-            handle={handle}
             step={5}
             onChange={this.onSliderChange}
             onAfterChange={this.onSliderSelect}

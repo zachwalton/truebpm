@@ -18,11 +18,6 @@ STATIC_DIR = BUILD_DIR + '/static'
 
 app = bottle.Bottle()
 
-@app.hook('after_request')
-def enable_cors():
-    if not PROD:
-        response.headers['Access-Control-Allow-Origin'] = '*'
-
 @app.get('/')
 def root():
     return static_file('index.html', root=BUILD_DIR)
