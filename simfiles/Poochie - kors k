@@ -1,20 +1,13 @@
-﻿//----- song id: pooc
+//----- song ID: pooc -----//
 #TITLE:Poochie;
 #ARTIST:kors k;
-#TITLETRANSLIT:;
-#ARTISTTRANSLIT:;
 #BANNER:Poochie.png;
 #BACKGROUND:Poochie-bg.png;
-#CDTITLE:./CDTitles/REFLEC BEAT groovin'!!.png;
+#CDTITLE:./CDTitles/RB groovin'!!.png;
 #MUSIC:Poochie.ogg;
-#OFFSET:0.000;
-#SAMPLESTART:28.364;
-#SAMPLELENGTH:15.000;
-#SELECTABLE:YES;
-#DISPLAYBPM:110:220;
-#BPMS:0=110.092,4=110.008,36=219.847,68=110.008,180=220;
-#STOPS:;
-#BGCHANGES:;
+#SAMPLESTART:28.422;
+#SAMPLELENGTH:15;
+#BPMS:0=110,36=220,68=110,180=220;
 
 #NOTES:
      dance-single:
@@ -377,6 +370,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -818,6 +812,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -1906,6 +1901,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -3002,6 +2998,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-double:
      :
@@ -3439,6 +3436,7 @@
 00000000
 00000000
 ;
+
 #NOTES:
      dance-double:
      :
@@ -4151,6 +4149,7 @@
 00000000
 00000000
 ;
+
 #NOTES:
      dance-double:
      :

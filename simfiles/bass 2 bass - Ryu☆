@@ -1,20 +1,13 @@
-﻿//----- song id: basb
+﻿//----- song ID: basb -----//
 #TITLE:bass 2 bass;
 #ARTIST:Ryu☆;
-#TITLETRANSLIT:;
-#ARTISTTRANSLIT:;
 #BANNER:bass 2 bass.png;
 #BACKGROUND:bass 2 bass-bg.png;
 #CDTITLE:./CDTitles/jubeat.png;
 #MUSIC:bass 2 bass.ogg;
-#OFFSET:0.000;
-#SAMPLESTART:34.286;
-#SAMPLELENGTH:15.000;
-#SELECTABLE:YES;
-#DISPLAYBPM:140;
-#BPMS:0=140.078,4=140.003;
-#STOPS:;
-#BGCHANGES:;
+#SAMPLESTART:34.308;
+#SAMPLELENGTH:15;
+#BPMS:0=140;
 
 #NOTES:
      dance-single:
@@ -307,6 +300,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -598,6 +592,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -1085,11 +1080,12 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
      Hard:
-     11:
+     12:
      :
 0000
 0000
@@ -1704,6 +1700,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-double:
      :
@@ -1995,6 +1992,7 @@
 00000000
 00000000
 ;
+
 #NOTES:
      dance-double:
      :
@@ -2482,11 +2480,12 @@
 00000000
 00000000
 ;
+
 #NOTES:
      dance-double:
      :
      Hard:
-     13:
+     12:
      :
 00000000
 00000000

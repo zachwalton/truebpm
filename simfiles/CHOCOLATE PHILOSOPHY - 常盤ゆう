@@ -1,17 +1,17 @@
-﻿#TITLE:CHOCOLATE PHILOSOPHY;
+﻿//----- song ID: chop -----//
+#TITLE:CHOCOLATE PHILOSOPHY;
 #ARTIST:常盤ゆう;
 #ARTISTTRANSLIT:Yuu Tokiwa;
 #BANNER:CHOCOLATE PHILOSOPHY.png;
 #BACKGROUND:CHOCOLATE PHILOSOPHY-bg.png;
 #CDTITLE:./CDTITLES/GF 8thMIX & DM 7thMIX.png;
 #MUSIC:CHOCOLATE PHILOSOPHY.ogg;
-#SAMPLESTART:40.909;
+#SAMPLESTART:40.926;
 #SAMPLELENGTH:15;
 #DISPLAYBPM:110;
 #BPMS:0=109.5,3=110;
 #TIMESIGNATURES:0=3=4,135=2.5=4.5,140=3=4;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -353,7 +353,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -767,7 +766,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1189,7 +1187,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1631,7 +1628,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -2665,7 +2661,6 @@
 0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3079,7 +3074,6 @@
 00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3501,7 +3495,6 @@
 00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3943,7 +3936,6 @@
 00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :

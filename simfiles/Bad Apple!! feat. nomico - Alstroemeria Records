@@ -1,20 +1,14 @@
-﻿//----- song id: bada
+//----- song ID: bada -----//
 #TITLE:Bad Apple!! feat. nomico;
 #ARTIST:Alstroemeria Records;
-#TITLETRANSLIT:;
-#ARTISTTRANSLIT:;
 #BANNER:Bad Apple!! feat. nomico.png;
 #BACKGROUND:Bad Apple!! feat. nomico-bg.png;
-#CDTITLE:./CDTitles/DDR 2014.png;
+#CDTITLE:./CDTitles/DDR A.png;
 #MUSIC:Bad Apple!! feat. nomico.ogg;
-#OFFSET:0.000;
-#SAMPLESTART:77.824;
-#SAMPLELENGTH:15.000;
-#SELECTABLE:YES;
+#SAMPLESTART:77.785;
+#SAMPLELENGTH:15;
 #DISPLAYBPM:138;
-#BPMS:0=138.462,4=137.998,288=137.993;
-#STOPS:;
-#BGCHANGES:;
+#BPMS:0=137.75,4=138;
 
 #NOTES:
      dance-single:
@@ -372,6 +366,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -733,6 +728,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -1314,6 +1310,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -2039,11 +2036,12 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-double:
      :
      Easy:
-     3:
+     5:
      :
 00000000
 00000000
@@ -2400,6 +2398,7 @@
 00000000
 00000000
 ;
+
 #NOTES:
      dance-double:
      :
@@ -2981,6 +2980,7 @@
 00000000
 00000000
 ;
+
 #NOTES:
      dance-double:
      :

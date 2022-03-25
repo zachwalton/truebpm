@@ -1,14 +1,14 @@
+//----- song ID: suss -----//
 #TITLE:SUPER SUMMER SALE;
 #ARTIST:BEMANI Sound Team "U1 overground";
 #BANNER:SUPER SUMMER SALE.png;
 #BACKGROUND:SUPER SUMMER SALE-bg.png;
 #CDTITLE:./CDTitles/DDR A.png;
 #MUSIC:SUPER SUMMER SALE.ogg;
-#SAMPLESTART:20.129;
+#SAMPLESTART:20.132;
 #SAMPLELENGTH:15;
 #BPMS:0=155;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -404,9 +404,13 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -919,14 +923,18 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
      Medium:
-     11:
+     12:
      :
 0000
 0000
@@ -1590,9 +1598,13 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -2605,9 +2617,13 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3108,14 +3124,18 @@
 00000000
 00000000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
      Medium:
-     11:
+     12:
      :
 00000000
 00000000
@@ -3751,9 +3771,13 @@
 00000000
 00000000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -4763,6 +4787,11 @@
 00000000
 ,
 00000303
+00000000
+00000000
+00000000
+,
+00000000
 00000000
 00000000
 00000000

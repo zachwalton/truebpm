@@ -1,14 +1,14 @@
+//----- song ID: chro2 -----//
 #TITLE:Chronos (walk with you remix);
 #ARTIST:BEMANI Sound Team "TAG";
 #BANNER:Chronos (walk with you remix).png;
-#BACKGROUND:Chronos (walk with you remix)-jacket.png;
+#BACKGROUND:Chronos (walk with you remix)-bg.png;
 #CDTITLE:./CDTitles/DDR A.png;
 #MUSIC:Chronos (walk with you remix).ogg;
-#SAMPLESTART:63.243;
+#SAMPLESTART:50.268;
 #SAMPLELENGTH:15;
 #BPMS:0=148,84=74,96=148,180=74,196=148;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -374,14 +374,18 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
      Easy:
-     6:
+     7:
      :
 0000
 0000
@@ -794,9 +798,13 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1514,9 +1522,13 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -2498,9 +2510,13 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2910,9 +2926,13 @@
 00000000
 00000000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3602,9 +3622,13 @@
 00000000
 00000000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -4595,6 +4619,11 @@
 00000000
 ,
 00033000
+00000000
+00000000
+00000000
+,
+00000000
 00000000
 00000000
 00000000

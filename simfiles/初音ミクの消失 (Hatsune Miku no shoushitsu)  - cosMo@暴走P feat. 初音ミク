@@ -1,16 +1,16 @@
-﻿#TITLE:初音ミクの消失;
+﻿//----- song ID: hmss -----//
+#TITLE:初音ミクの消失;
 #ARTIST:cosMo@暴走P feat. 初音ミク;
 #TITLETRANSLIT:Hatsune Miku no shoushitsu;
 #ARTISTTRANSLIT:cosMo@BousouP feat. Hatsune Miku;
 #BANNER:Hatsune Miku no shoushitsu.png;
 #BACKGROUND:Hatsune Miku no shoushitsu-bg.png;
-#CDTITLE:./CDTitles/SOUND VOLTEX III GRAVITY WARS.png;
+#CDTITLE:./CDTitles/SOUND VOLTEX.png;
 #MUSIC:Hatsune Miku no shoushitsu.ogg;
-#SAMPLESTART:65;
+#SAMPLESTART:64.829;
 #SAMPLELENGTH:15;
 #BPMS:0=240;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -671,14 +671,18 @@
 0000
 0000
 3003
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
      Easy:
-     7:
+     8:
      :
 0000
 0000
@@ -1354,9 +1358,13 @@
 0000
 0300
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -2037,9 +2045,13 @@
 0000
 0300
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -3016,14 +3028,18 @@
 0000
 0300
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
      Challenge:
-     16:
+     15:
      :
 0000
 0000
@@ -4115,9 +4131,13 @@
 0000
 0300
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -4803,14 +4823,18 @@
 00000000
 00000000
 00030000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
      Medium:
-     11:
+     13:
      :
 00000000
 00000000
@@ -5782,9 +5806,13 @@
 00000000
 03000000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -6285,9 +6313,9 @@
 20000000
 00000000
 00000000
-00000000
-,
 30000000
+,
+00000000
 00000000
 00000000
 00000000
@@ -6813,14 +6841,18 @@
 00000000
 03000000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
      Challenge:
-     16:
+     15:
      :
 00000000
 00000000
@@ -7903,5 +7935,10 @@
 00000000
 00000000
 00000300
+00000000
+,
+00000000
+00000000
+00000000
 00000000
 ;

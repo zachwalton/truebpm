@@ -1,14 +1,14 @@
+//----- song ID: huia -----//
 #TITLE:HANDS UP IN THE AIR;
 #ARTIST:U1;
 #BANNER:HANDS UP IN THE AIR.png;
 #BACKGROUND:HANDS UP IN THE AIR-bg.png;
 #CDTITLE:./CDTitles/DDR A.png;
 #MUSIC:HANDS UP IN THE AIR.ogg;
-#SAMPLESTART:84.375;
+#SAMPLESTART:84.395;
 #SAMPLELENGTH:15;
 #BPMS:0=128;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -279,9 +279,13 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -557,9 +561,13 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -947,9 +955,13 @@
 0000
 0000
 3003
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1777,9 +1789,13 @@
 0000
 0000
 0303
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2050,9 +2066,13 @@
 00000100
 00001000
 00001000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2476,9 +2496,13 @@
 00000000
 00000000
 00033000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3270,4 +3294,9 @@
 00000000
 00000000
 00033000
+,
+00000000
+00000000
+00000000
+00000000
 ;

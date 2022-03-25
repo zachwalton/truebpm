@@ -1,16 +1,16 @@
-﻿#TITLE:Catch Our Fire!;
+//----- song ID: caof -----//
+#TITLE:Catch Our Fire!;
 #ARTIST:中島由貴;
 #ARTISTTRANSLIT:Yuki Nakashima;
 #BANNER:Catch Our Fire!.png;
 #BACKGROUND:Catch Our Fire!-bg.png;
 #CDTITLE:./CDTitles/DDR A.png;
 #MUSIC:Catch Our Fire!.ogg;
-#SAMPLESTART:56.684;
+#SAMPLESTART:56.68;
 #SAMPLELENGTH:15;
 #DISPLAYBPM:190;
 #BPMS:0=191.5,4=190;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -491,9 +491,13 @@
 0000
 0100
 0100
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1206,9 +1210,13 @@
 0000
 1001
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -2113,9 +2121,13 @@
 0000
 1001
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -3492,9 +3504,13 @@
 0000
 1001
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -4207,9 +4223,13 @@
 00000000
 01100000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -5114,9 +5134,13 @@
 00000000
 01100000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -6492,5 +6516,10 @@
 00001010
 00000000
 00000110
+00000000
+,
+00000000
+00000000
+00000000
 00000000
 ;

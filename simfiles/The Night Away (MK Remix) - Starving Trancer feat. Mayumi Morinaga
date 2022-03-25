@@ -1,4 +1,4 @@
-﻿//----- song id: tnaw
+//----- song ID: tnaw -----//
 #TITLE:The Night Away (MK Remix);
 #ARTIST:Starving Trancer feat. Mayumi Morinaga;
 #BANNER:The Night Away (MK Remix).png;
@@ -8,7 +8,7 @@
 #SAMPLESTART:41.704;
 #SAMPLELENGTH:15;
 #DISPLAYBPM:160;
-#BPMS:0=159.514,4=160;
+#BPMS:0=160,76=161.5,80=160,208=158,212=160;
 
 #NOTES:
      dance-single:
@@ -406,11 +406,12 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
      Easy:
-     7:
+     5:
      :
 0000
 0000
@@ -990,6 +991,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -1542,6 +1544,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -2350,11 +2353,12 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-double:
      :
      Easy:
-     7:
+     5:
      :
 00000000
 00000000
@@ -2746,6 +2750,7 @@
 00000000
 00000000
 ;
+
 #NOTES:
      dance-double:
      :
@@ -3298,6 +3303,7 @@
 00000000
 00000000
 ;
+
 #NOTES:
      dance-double:
      :

@@ -1,15 +1,15 @@
+﻿//----- song ID: seik -----//
 #TITLE:星座が恋した瞬間を。;
 #ARTIST:BEMANI Sound Team "DJ TOTTO feat.MarL";
 #TITLETRANSLIT:Seiza ga koishita shunkan wo.;
 #BANNER:Seiza ga koishita shunkan wo.png;
-#BACKGROUND:Seiza ga koishita shunkan wo-jacket.png;
+#BACKGROUND:Seiza ga koishita shunkan wo-bg.png;
 #CDTITLE:./CDTitles/DDR A.png;
 #MUSIC:Seiza ga koishita shunkan wo.ogg;
-#SAMPLESTART:54.189;
+#SAMPLESTART:54.187;
 #SAMPLELENGTH:15;
 #BPMS:0=186;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -480,9 +480,13 @@
 0000
 0010
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -985,9 +989,13 @@
 0001
 1000
 1000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1630,9 +1638,13 @@
 0100
 0010
 0100
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -2363,9 +2375,13 @@
 0001
 0100
 0100
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2852,9 +2868,13 @@
 00001000
 00010000
 00010000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3481,9 +3501,13 @@
 00000001
 00000100
 00000010
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -4190,4 +4214,9 @@
 10000000
 01000000
 01000000
+,
+00000000
+00000000
+00000000
+00000000
 ;

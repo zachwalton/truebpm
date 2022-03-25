@@ -1,4 +1,4 @@
-﻿//----- song id: dete
+﻿//----- song ID: dete -----//
 #TITLE:Determination;
 #ARTIST:柊木りお;
 #ARTISTTRANSLIT:Rio Hiiragi;
@@ -6,7 +6,7 @@
 #BACKGROUND:Determination-bg.png;
 #CDTITLE:./CDTitles/DDR A.png;
 #MUSIC:Determination.ogg;
-#SAMPLESTART:72.261;
+#SAMPLESTART:72.216;
 #SAMPLELENGTH:15;
 #BPMS:0=230;
 
@@ -491,6 +491,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -988,6 +989,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -1624,6 +1626,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -2348,6 +2351,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-double:
      :
@@ -2845,6 +2849,7 @@
 00000000
 00000000
 ;
+
 #NOTES:
      dance-double:
      :
@@ -3481,6 +3486,7 @@
 00000000
 00000000
 ;
+
 #NOTES:
      dance-double:
      :

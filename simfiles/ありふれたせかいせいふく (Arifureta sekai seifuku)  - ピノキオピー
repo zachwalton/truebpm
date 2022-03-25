@@ -1,4 +1,5 @@
-﻿#TITLE:ありふれたせかいせいふく;
+//----- song ID: arse -----//
+#TITLE:ありふれたせかいせいふく;
 #ARTIST:ピノキオピー;
 #TITLETRANSLIT:Arifureta sekai seifuku;
 #ARTISTTRANSLIT:PinocchioP;
@@ -6,14 +7,12 @@
 #BACKGROUND:Arifureta sekai seifuku-bg.png;
 #CDTITLE:./CDTitles/SDVX II -infinite infection-.png;
 #MUSIC:Arifureta sekai seifuku.ogg;
-#SAMPLESTART:52.6;
+#SAMPLESTART:52.57;
 #SAMPLELENGTH:15;
-#BPMS:0=150;
-#TIMESIGNATURES:0=4=4,196=2=4,
-198=4=4
-;
+#DISPLAYBPM:150;
+#BPMS:0=150.5,4=150;
+#TIMESIGNATURES:0=4=4,196=2=4,198=4=4;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -309,9 +308,13 @@
 0010
 0000
 1001
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -730,9 +733,13 @@
 0000
 3003
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1235,9 +1242,13 @@
 0000
 3003
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -2100,9 +2111,13 @@
 0000
 0330
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2521,9 +2536,13 @@
 00000000
 30030000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3026,9 +3045,13 @@
 00000000
 00003003
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3866,5 +3889,10 @@
 00000000
 00000000
 00000330
+00000000
+,
+00000000
+00000000
+00000000
 00000000
 ;

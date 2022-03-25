@@ -1,15 +1,16 @@
-#TITLE:Strawberry Chuâ™¡Chuâ™¡;
-#ARTIST:ã¨ãã‚ãã‚¢ã‚¤ãƒ‰ãƒ« project ã‚¯ãƒƒã‚­ãƒ¼ãƒ‘ãƒ©ãƒ€ã‚¤ã‚¹;
+﻿//----- song ID: stch -----//
+#TITLE:Strawberry Chu♡Chu♡;
+#ARTIST:ときめきアイドル project クッキーパラダイス;
 #ARTISTTRANSLIT:Tokimeki Idol project Cookie Paradise;
 #BANNER:Strawberry Chu Chu.png;
 #BACKGROUND:Strawberry Chu Chu-bg.png;
 #CDTITLE:./CDTitles/DDR A.png;
 #MUSIC:Strawberry Chu Chu.ogg;
-#SAMPLESTART:50.803;
+#SAMPLESTART:50.992;
 #SAMPLELENGTH:15;
-#BPMS:0=137;
+#DISPLAYBPM:137;
+#BPMS:0=137.5,4=137;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -330,9 +331,13 @@
 1001
 1001
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -653,9 +658,13 @@
 0100
 1001
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1176,9 +1185,13 @@
 0110
 1001
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1593,9 +1606,9 @@
 0000
 0000
 0000
-0000
-0000
 0330
+0000
+0000
 0000
 ,
 0000
@@ -2087,9 +2100,13 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2410,9 +2427,13 @@
 01100000
 10010000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2933,9 +2954,13 @@
 00011000
 10010000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3841,6 +3866,11 @@
 00001000
 00000001
 00001001
+00000000
+00000000
+00000000
+,
+00000000
 00000000
 00000000
 00000000

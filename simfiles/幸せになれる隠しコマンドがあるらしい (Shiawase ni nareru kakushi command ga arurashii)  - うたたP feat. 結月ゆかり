@@ -1,4 +1,5 @@
-﻿#TITLE:幸せになれる隠しコマンドがあるらしい;
+﻿//----- song ID: shia -----//
+#TITLE:幸せになれる隠しコマンドがあるらしい;
 #ARTIST:うたたP feat. 結月ゆかり;
 #TITLETRANSLIT:Shiawase ni nareru kakushi command ga arurashii;
 #ARTISTTRANSLIT:UtataP feat. Yuzuki Yukari;
@@ -6,11 +7,10 @@
 #BACKGROUND:Shiawase ni nareru kakushi command ga arurashii-bg.png;
 #CDTITLE:./CDTitles/SDVX III GRAVITY WARS.png;
 #MUSIC:Shiawase ni nareru kakushi command ga arurashii.ogg;
-#SAMPLESTART:86.197;
+#SAMPLESTART:86.24;
 #SAMPLELENGTH:15;
 #BPMS:0=142;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -396,14 +396,18 @@
 0003
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
      Easy:
-     7:
+     6:
      :
 0000
 0000
@@ -784,9 +788,13 @@
 3003
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1348,9 +1356,13 @@
 3003
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -2152,9 +2164,13 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2540,9 +2556,13 @@
 00033000
 00000000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3128,9 +3148,13 @@
 00033000
 00000000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3536,7 +3560,7 @@
 00000000
 ,
 10010000
-00000000
+01100000
 10010000
 01100000
 ,
@@ -3882,6 +3906,11 @@
 ,
 00022000
 00033000
+00000000
+00000000
+,
+00000000
+00000000
 00000000
 00000000
 ;

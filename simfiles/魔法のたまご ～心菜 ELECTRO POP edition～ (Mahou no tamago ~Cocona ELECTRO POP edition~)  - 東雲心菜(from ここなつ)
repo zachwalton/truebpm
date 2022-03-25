@@ -1,4 +1,5 @@
-﻿#TITLE:魔法のたまご ～心菜 ELECTRO POP edition～;
+﻿//----- song ID: tama -----//
+#TITLE:魔法のたまご ～心菜 ELECTRO POP edition～;
 #ARTIST:東雲心菜(from ここなつ);
 #TITLETRANSLIT:Mahou no tamago ~Cocona ELECTRO POP edition~;
 #ARTISTTRANSLIT:Cocona Shinonome (from CocoNatsu);
@@ -6,18 +7,17 @@
 #BACKGROUND:Mahou no tamago ~Cocona ELECTRO POP edition~-bg.png;
 #CDTITLE:./CDTitles/BeatStream.png;
 #MUSIC:Mahou no tamago ~Cocona ELECTRO POP edition~.ogg;
-#SAMPLESTART:69.184;
+#SAMPLESTART:69.211;
 #SAMPLELENGTH:15;
-#BPMS:0=142;
-#BGCHANGES:;
+#DISPLAYBPM:142;
+#BPMS:0=140.6,4=142;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
      Beginner:
      3:
-     0.135,0.200,0,0,0:
+     :
 0000
 0000
 0000
@@ -304,12 +304,16 @@
 0001
 ,
 1000
+0000
+0000
+0000
+,
+0000
 0000
 0000
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -605,15 +609,19 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
      Medium:
      8:
-     0.328,0.377,0.040,0.020,0:
+     :
 0000
 0000
 0000
@@ -1079,15 +1087,19 @@
 0000
 0000
 0300
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
      Hard:
      11:
-     0.483,0.485,0.090,0.010,0.135:
+     :
 0000
 0000
 0000
@@ -1768,15 +1780,19 @@
 0001
 0000
 0310
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
      Easy:
-     4:
-     0.269,0.377,0.090,0.040,0:
+     6:
+     :
 00000000
 00000000
 00000000
@@ -2070,15 +2086,19 @@
 00000000
 00000000
 00033000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
      Medium:
      8:
-     0.360,0.377,0.140,0.030,0:
+     :
 00000000
 00000000
 00000000
@@ -2488,15 +2508,19 @@
 00000000
 00000000
 00000003
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
      Hard:
      11:
-     0.481,0.493,0.130,0.030,0.115:
+     :
 00000000
 00000000
 00000000
@@ -3142,4 +3166,9 @@
 00000000
 00000000
 00003000
+,
+00000000
+00000000
+00000000
+00000000
 ;

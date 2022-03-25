@@ -1,3 +1,4 @@
+﻿//----- song ID: kuns -----//
 #TITLE:君氏危うくも近うよれ;
 #ARTIST:A応P;
 #TITLETRANSLIT:Kunshi ayauku mo chikou yore;
@@ -5,11 +6,11 @@
 #BACKGROUND:Kunshi ayauku mo chikou yore-bg.png;
 #CDTITLE:./CDTitles/DDR A.png;
 #MUSIC:Kunshi ayauku mo chikou yore.ogg;
-#SAMPLESTART:54.444;
+#SAMPLESTART:54.452;
 #SAMPLELENGTH:15;
-#BPMS:0=162;
+#DISPLAYBPM:162;
+#BPMS:0=161.5,4=162;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -320,9 +321,13 @@
 0000
 1000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -633,9 +638,13 @@
 0001
 1000
 0110
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1158,9 +1167,13 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1723,9 +1736,13 @@
 0000
 0000
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2044,9 +2061,13 @@
 00001000
 00000100
 00001001
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2569,9 +2590,13 @@
 00000000
 00000000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3127,6 +3152,11 @@
 00000000
 00000100
 00000010
+00000000
+00000000
+00000000
+,
+00000000
 00000000
 00000000
 00000000

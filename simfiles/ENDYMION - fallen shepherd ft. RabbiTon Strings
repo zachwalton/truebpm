@@ -1,14 +1,15 @@
+//----- song ID: endy -----//
 #TITLE:ENDYMION;
 #ARTIST:fallen shepherd ft. RabbiTon Strings;
 #BANNER:ENDYMION.png;
 #BACKGROUND:ENDYMION-bg.ogg;
 #CDTITLE:./CDTitles/DDR A.png;
 #MUSIC:ENDYMION.ogg;
-#SAMPLESTART:90.273;
+#SAMPLESTART:90.281;
 #SAMPLELENGTH:15;
+#DISPLAYBPM:220:440;
 #BPMS:0=220,72=440,180=220,216=880,232=220,312=440,336=220,340=440,398=220,399=110,400=440,464=220,505=440,627=220,633.5=440;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -864,7 +865,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1885,9 +1885,13 @@
 0000
 0000
 3000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -3179,7 +3183,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -4759,7 +4762,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -6411,7 +6413,6 @@
 0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -7435,7 +7436,6 @@
 00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -8655,7 +8655,6 @@
 00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -10187,7 +10186,6 @@
 00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :

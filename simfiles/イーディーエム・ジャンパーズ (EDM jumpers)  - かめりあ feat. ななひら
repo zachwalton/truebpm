@@ -1,4 +1,4 @@
-﻿//----- song id: edmj
+﻿//----- song ID: edmj -----//
 #TITLE:イーディーエム・ジャンパーズ;
 #ARTIST:かめりあ feat. ななひら;
 #TITLETRANSLIT:EDM jumpers;
@@ -7,14 +7,10 @@
 #BACKGROUND:EDM jumpers-bg.png;
 #CDTITLE:./CDTitles/DDR 2014.png;
 #MUSIC:EDM jumpers.ogg;
-#OFFSET:0.000;
-#SAMPLESTART:67.802;
-#SAMPLELENGTH:15.000;
-#SELECTABLE:YES;
+#SAMPLESTART:67.804;
+#SAMPLELENGTH:15;
 #DISPLAYBPM:72:145;
-#BPMS:0=145.161,4=144.979,68=72.532,80=144.942,112=72.581,116=145.002,204=72.435,208=145.071,260=144.933;
-#STOPS:;
-#BGCHANGES:;
+#BPMS:0=145,68=72.5,80=145,112=72.5,116=145,204=72.5,208=145;
 
 #NOTES:
      dance-single:
@@ -327,6 +323,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -648,6 +645,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -1093,6 +1091,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-single:
      :
@@ -1818,6 +1817,7 @@
 0000
 0000
 ;
+
 #NOTES:
      dance-double:
      :
@@ -2139,6 +2139,7 @@
 00000000
 00000000
 ;
+
 #NOTES:
      dance-double:
      :
@@ -2564,6 +2565,7 @@
 00000000
 00000000
 ;
+
 #NOTES:
      dance-double:
      :

@@ -20,7 +20,7 @@ def main():
 
     base = os.path.dirname(os.path.abspath(simfile))
     parsed = SMParser(open(simfile).read())
-    title = parsed.TITLE.decode('utf-8')
+    title = parsed.TITLE
 
     if pattern.match(title):
         try:

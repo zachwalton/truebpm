@@ -1,4 +1,5 @@
-﻿#TITLE:invisible rain;
+﻿//----- song ID: inra -----//
+#TITLE:invisible rain;
 #ARTIST:ときめきアイドル project 月島美奈都;
 #ARTISTTRANSLIT:Tokimeki Idol project Tsukishima Minato;
 #BANNER:invisible rain.png;
@@ -9,7 +10,6 @@
 #SAMPLELENGTH:15;
 #BPMS:0=97,156=90,160=72,162=58;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -232,7 +232,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -455,7 +454,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -838,7 +836,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1485,7 +1482,6 @@
 0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -1896,7 +1892,6 @@
 00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2275,7 +2270,6 @@
 00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :

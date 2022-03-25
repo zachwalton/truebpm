@@ -1,4 +1,5 @@
-﻿#TITLE:闘え！ダダンダーンV;
+﻿//----- song ID: tata -----//
+#TITLE:闘え！ダダンダーンV;
 #ARTIST:ときめきアイドル project;
 #TITLETRANSLIT:Tatakae! Dadandarn V;
 #ARTISTTRANSLIT:Tokimeki Idol project;
@@ -6,12 +7,11 @@
 #BACKGROUND:Tatakae! Dadandarn V-bg.png;
 #CDTITLE:./CDTitles/DDR A.png;
 #MUSIC:Tatakae! Dadandarn V.ogg;
-#SAMPLESTART:1.364;
+#SAMPLESTART:51.827;
 #SAMPLELENGTH:15;
 #DISPLAYBPM:176;
 #BPMS:0=173.8,4=176;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -453,7 +453,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -915,7 +914,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1581,7 +1579,6 @@
 0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -2363,7 +2360,6 @@
 0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2825,7 +2821,6 @@
 00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3491,7 +3486,6 @@
 00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :

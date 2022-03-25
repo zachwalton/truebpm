@@ -1,3 +1,4 @@
+//----- song ID: lesa -----//
 #TITLE:Lesson by DJ;
 #ARTIST:U.T.D. & Friends;
 #BANNER:Lesson by DJ.png;
@@ -8,13 +9,12 @@
 #SAMPLELENGTH:15;
 #BPMS:0=120;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
      Beginner:
      1:
-     0.067,0.119,0.029,0.010,0.000:
+     :
 0000
 0000
 0000
@@ -274,5 +274,10 @@
 0100
 0100
 0001
+0000
+,
+0000
+0000
+0000
 0000
 ;

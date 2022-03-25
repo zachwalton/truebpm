@@ -1,15 +1,15 @@
+﻿//----- song ID: smpa -----//
 #TITLE:Smiling Passion;
-#ARTIST:ã¨ãã‚ãã‚¢ã‚¤ãƒ‰ãƒ« project;
+#ARTIST:ときめきアイドル project;
 #ARTISTTRANSLIT:Tokimeki Idol project;
 #BANNER:Smiling Passion.png;
-#BACKGROUND:Smiling Passion-jacket.png;
+#BACKGROUND:Smiling Passion-bg.png;
 #CDTITLE:./CDTitles/DDR A.png;
 #MUSIC:Smiling Passion.ogg;
-#SAMPLESTART:62.406;
+#SAMPLESTART:62.411;
 #SAMPLELENGTH:15;
 #BPMS:0=187;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -400,9 +400,13 @@
 0000
 0010
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -857,9 +861,13 @@
 0000
 0310
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -1454,9 +1462,13 @@
 0000
 0310
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-single - ----------------
 #NOTES:
      dance-single:
      :
@@ -2087,9 +2099,13 @@
 0300
 1001
 0000
+,
+0000
+0000
+0000
+0000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -2540,9 +2556,13 @@
 00000000
 30100000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3121,9 +3141,13 @@
 00000000
 00013000
 00000000
+,
+00000000
+00000000
+00000000
+00000000
 ;
 
-//---------------dance-double - ----------------
 #NOTES:
      dance-double:
      :
@@ -3761,5 +3785,10 @@
 00000000
 00000000
 03100000
+00000000
+,
+00000000
+00000000
+00000000
 00000000
 ;
