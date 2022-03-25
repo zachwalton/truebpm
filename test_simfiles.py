@@ -22,7 +22,7 @@ class SimfileTestCase(unittest.TestCase):
                     preferred_rate=570,
                     speed_change_threshold=1)
             except Exception as e:
-                errors.append("error in {}: {}: {}".format(sim, e.__class__.__name__, e.message))
+                errors.append("error in {}: {}: {}".format(sim, e.__class__.__name__, e))
                 logging.error(errors[-1])
 
         assert len(errors) == 0, "there were one or more simfile errors"

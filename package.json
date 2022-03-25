@@ -1,8 +1,11 @@
 {
   "engines": {
-    "node": ">=8.0.0"
+    "node": "16.14.2"
   },
   "scripts": {
     "postinstall": "cd frontend && yarn install --only=dev && yarn install && yarn build"
+  },
+  "dependencies": {
+    "yarn": "^1.22.18"
   }
 }
