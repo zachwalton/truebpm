@@ -1,6 +1,6 @@
 # True BPM
 
-[![](https://travis-ci.org/zachwalton/truebpm.svg?branch=master)](https://travis-ci.org/zachwalton/truebpm/builds)
+[![](https://travis-ci.com/zachwalton/truebpm.svg?branch=master)](https://travis-ci.com/zachwalton/truebpm/builds)
 
 https://truebpm.dance
 
